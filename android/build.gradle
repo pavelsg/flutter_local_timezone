@@ -1,7 +1,5 @@
-plugins {
-    id 'com.android.library'
-    id 'org.jetbrains.kotlin.android' version '2.0.10'
-}
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 33
@@ -10,13 +8,11 @@ android {
         minSdkVersion 16
         targetSdkVersion 33
 
-        // Define the Java source compatibility
         compileOptions {
             sourceCompatibility JavaVersion.VERSION_11
             targetCompatibility JavaVersion.VERSION_11
         }
 
-        // Kotlin source compatibility
         kotlinOptions {
             jvmTarget = '1.8'
         }
