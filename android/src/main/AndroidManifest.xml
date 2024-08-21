@@ -1,9 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ai.achieveup.flutter_local_timezone">
+    package="com.example.flutter_local_timezone">
 
-    <application
-        android:label="flutter_local_timezone"
-        android:name="${applicationName}">
+    <application>
+        <!-- Do not define android:label here -->
     </application>
 
 </manifest>
