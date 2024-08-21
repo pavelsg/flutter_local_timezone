@@ -2,17 +2,21 @@ import 'dart:async';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/services.dart';
 
-import 'flutter_local_timezone_web.dart'
-    if (dart.library.io) 'flutter_local_timezone_mobile.dart';
-
 class FlutterLocalTimezone {
+  static const MethodChannel _channel =
+      MethodChannel('flutter_local_timezone');
+
   static Future<String?> getLocalTimezone() async {
     if (kIsWeb) {
-      return FlutterLocalTimezoneWeb().getLocalTimezone();
+      return _getTimezoneForWeb();
     } else {
-      const MethodChannel _channel = MethodChannel('flutter_local_timezone');
       final String? timezone = await _channel.invokeMethod('getLocalTimezone');
       return timezone;
     }
+  }
+
+  // Web-specific implementation
+  static String _getTimezoneForWeb() {
+    return DateTime.now().timeZoneName;
   }
 }

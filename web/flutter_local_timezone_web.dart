@@ -1,15 +1,9 @@
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
-import 'flutter_local_timezone_web.dart';
+import 'package:flutter_local_timezone/flutter_local_timezone.dart';
 
+/// The web implementation of the FlutterLocalTimezone plugin.
 class FlutterLocalTimezoneWeb {
   static void registerWith(Registrar registrar) {
-    // Register the plugin with the web registrar
-    final instance = FlutterLocalTimezoneWeb();
-    // Set the method to handle timezone request from web
-  }
-
-  Future<String?> getLocalTimezone() {
-    return FlutterLocalTimezone().getLocalTimeZone();
+    // No additional logic is needed since `kIsWeb` is handled in flutter_local_timezone.dart
   }
 }
-
