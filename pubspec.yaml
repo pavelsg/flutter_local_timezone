@@ -10,7 +10,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: ai.achieveaup.flutter_local_timezone
+        package: com.example.flutter_local_timezone
         pluginClass: FlutterLocalTimezonePlugin
       ios:
         pluginClass: FlutterLocalTimezonePlugin
@@ -20,6 +20,10 @@ flutter:
         pluginClass: FlutterLocalTimezonePlugin
       windows:
         pluginClass: FlutterLocalTimezonePlugin
+      web:
+        pluginClass: FlutterLocalTimezoneWeb
+        fileName: flutter_local_timezone_web.dart
+
 
 dependencies:
   flutter:
