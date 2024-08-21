@@ -1,4 +1,4 @@
-package com.example.flutter_local_timezone;
+package ai.achieveup.flutter_local_timezone;
 
 import android.os.Build;
 import androidx.annotation.NonNull;
